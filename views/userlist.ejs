@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheet/style.css">
+    <title>user list</title>
+</head>
+<body>
+    <header class="bg-color padding" >
+        <div class="container flex justify-between font-size">
+        <a href="/">Home</a>
+         <a href="/">
+            <button class="btn">Back</button>
+         </a>
+        </div>
+    </header>
+    <main class="bg-green height">
+        <div class="container">
+<%createUser.forEach((elm)=>{%>
+   <div class="bg-color margin padding">
+<h1> Name: <%=elm.name%></h1>
+    <h2> Email: <%=elm.email%></h2>
+    
+    <a href="/user/<%=elm._id%>">
+        <button>show</button>
+    </a>
+
+    <a href="/user/<%=elm._id%>/delete">
+            <button>Delete</button>
+        </a>
+     </div>
+    
+<%})%>
+            
+        </div>
+    </main>
+</body>
+</html>

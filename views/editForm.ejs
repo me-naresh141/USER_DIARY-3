@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheet/style.css">
+    <title> edit form</title>
+</head>
+<body>
+    <header class="bg-color padding" >
+        <div class="container flex justify-between font-size">
+        <a href="/">Home</a>
+         <a href="/">
+            <button class="btn">Back</button>
+         </a>
+        </div>
+    </header>
+   <main class="bg-green height">
+    <div class="container height flex align-center justify-center">
+        <div class="form-div ">
+        <form action="/user/<%=user.id%>" method="post">
+           <h1>Edit Form</h1>
+            <input type="text" name="name" id="" class="width-100" placeholder="name" value="<%=user.name%>" >
+            <input type="email" name="email" id="" class="width-100" placeholder="email" value="<%=user.email%>" >
+            <input type="number" name="age" id="" class="width-100" placeholder="age" value="<%=user.age%>">
+            <input type="text" name="address" id="" class="width-100" placeholder="address" value="<%=user.address%>">
+            <textarea name="bio" id="" cols="30" rows="2"class="width-100" placeholder="bio" > <%=user.bio%></textarea>
+            <input type="text" name="hobbies" id="" class="width-100" placeholder="hobbies" value="<%=user.hobbies%>">
+            <input type="submit">
+        </form>
+        </div>
+    </div>
+   </main>
+</body>
+</html>
